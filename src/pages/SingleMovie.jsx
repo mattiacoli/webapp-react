@@ -27,19 +27,18 @@ export default function SingleMovie() {
 
         <div className="p-5 mb-4 bg-trasparent rounded-3" >
           <div className="container-fluid py-5">
-            <h1 className="display-5 fw-bolder mb-3">{movie.title}</h1>
 
             <div className="row">
               <div className="col-8 fs-3">
+                <h1 className="display-5 fw-bolder mb-3">{movie.title}</h1>
                 <p>Director: {movie.director}</p>
                 <p>Year: {movie.release_year}</p>
                 <p>Genre: {movie.genre}</p>
-                <div>
-                  Summary:
-                  <p>
-                    {movie.abstract}
-                  </p>
-                </div>
+
+                <p>
+                  {movie.abstract}
+                </p>
+
               </div>
 
               <div className="col-4">

@@ -4,9 +4,14 @@ export default function Header() {
 
   return (
     <>
-      <nav className="navbar navbar-expand navbar-dark bg-dark">
+      <nav className="navbar navbar-expand navbar-dark bg-dark px-2 d-flex justify-content-between">
+        <NavLink className="nav-link" to='/'>
+          <div className="logo text-white">
+            Movie<b>Forum</b>
+          </div>
+        </NavLink>
         <div className="nav navbar-nav">
-          <NavLink className="nav-item nav-link active" to="/">Home</NavLink>
+          <NavLink className="nav-item nav-link" to="/">Home</NavLink>
         </div>
       </nav>
 

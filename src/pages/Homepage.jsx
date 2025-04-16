@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+import CardMovie from "../components/CardMovie"
 
 export default function Homepage() {
 
@@ -29,17 +30,7 @@ export default function Homepage() {
             {movies.length > 0 && (
               movies.map(movie => (
 
-                <div className="col" key={movie.id}>
-                  <div className="card h-100">
-                    <Link to={`/movie/${movie.id}`}>
-                      <img src={`http://localhost:3000/images/${movie.image}`} alt="" style={{ aspectRatio: 1, objectFit: 'fill' }} className="card-img-top" />
-                    </Link>
-                    <div className="card-body">
-                      <h3>{movie.title}</h3>
-                      <p>{movie.genre}</p>
-                    </div>
-                  </div>
-                </div>
+                <CardMovie movie={movie} key={movie.id} />
               ))
             )}
           </div>
