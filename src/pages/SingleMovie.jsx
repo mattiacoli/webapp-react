@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import ReviewCard from '../components/ReviewCard'
+import FormReview from '../components/FormReview'
 
 
 
@@ -47,6 +48,14 @@ export default function SingleMovie() {
 
         </div>
       </div>
+
+
+
+      {/* Form */}
+      <FormReview />
+
+
+      <hr />
 
 
       {/* Reviews */}
