@@ -1,0 +1,14 @@
+.card {
+  box-shadow: 2px 3px 4px 0px #424141;
+
+  &:hover {
+    transform: scale(1.05);
+    transition: all 0.3s ease-in-out;
+    box-shadow: 3px 4px 5px 0px #424141;
+  }
+
+  & img {
+    aspect-ratio: 1;
+    object-fit: 'fill'
+  }
+}

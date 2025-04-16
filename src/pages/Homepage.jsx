@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
-import CardMovie from "../components/CardMovie"
+import CardMovie from "../components/CardMovie/CardMovie"
 
 export default function Homepage() {
 
