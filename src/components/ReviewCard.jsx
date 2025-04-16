@@ -38,8 +38,8 @@ export default function ReviewCard({ review }) {
         {review.text}
       </div>
 
-      <div className="card-footer fs-6">
-        create at:  {review.created_at}
+      <div className="card-footer fs-6 text-end">
+        date {new Date(review.created_at).toLocaleDateString()}
       </div>
 
 
