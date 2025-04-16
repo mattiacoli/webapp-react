@@ -22,7 +22,7 @@ export default function SingleMovie() {
 
   return (
     <>
-
+      {/* Jumbotron */}
       <div className="jumbotron h-100">
 
         <div className="p-5 mb-4 bg-trasparent rounded-3" >
@@ -50,6 +50,31 @@ export default function SingleMovie() {
           </div>
         </div>
       </div>
+
+
+      {/* Reviews */}
+      {movie.reviews?.length > 0 && (
+        <div className="container">
+          {movie.reviews.map(review => (
+            <div key={review.id} className="card fs-3 my-2">
+              <div className="card-header d-flex justify-content-between align-item-center ">
+                <h4 className='fw-bold'>{review.name}</h4>
+                <div className='vote'>vote: {review.vote}</div>
+              </div>
+
+              <div className="card-body">
+                {review.text}
+              </div>
+
+              <div className="card-footer">
+                {review.created_at}
+              </div>
+
+
+            </div>
+          ))}
+        </div>
+      )}
     </>
   )
 }
