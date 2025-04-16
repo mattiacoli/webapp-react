@@ -6,9 +6,12 @@ export default function FormReview() {
       <div className="container">
         <form action="POST">
 
+          <h2>Add your review</h2>
+
           <div className="mb-3">
             <div className="row">
 
+              {/* name input */}
               <div className="col-10">
                 <label htmlFor="name" className="form-label">Name</label>
                 <input
@@ -17,6 +20,7 @@ export default function FormReview() {
                   id="name" />
               </div>
 
+              {/* vote input */}
               <div className="col-2">
                 <label htmlFor="vote" className="form-label">Vote</label>
                 <input
@@ -29,13 +33,13 @@ export default function FormReview() {
             </div>
           </div>
 
+          {/* Review text area */}
           <div className="mb-3">
             <label htmlFor="text" className="form-label">Your Review</label>
             <textarea className="form-control" id="text" rows="3"></textarea>
           </div>
 
-
-
+          {/* Button */}
           <div className="mb-3">
             <button type="button" className="btn btn-dark">
               Send <i className="bi bi-send"></i>
