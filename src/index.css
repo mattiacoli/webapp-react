@@ -1,2 +1,6 @@
 @import 'bootstrap';
-@import 'bootstrap-icons'
+@import 'bootstrap-icons';
+
+body {
+  font-family: 'Barlow Condensed', sans-serif;
+}
