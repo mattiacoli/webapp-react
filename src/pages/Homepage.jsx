@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
 import CardMovie from "../components/CardMovie/CardMovie"
 
 export default function Homepage() {
@@ -20,8 +19,6 @@ export default function Homepage() {
   return (
     <>
 
-
-
       {/* Movies Card Section */}
       <section>
 
@@ -36,10 +33,6 @@ export default function Homepage() {
           </div>
         </div>
       </section>
-
-
-
-
 
     </>
 

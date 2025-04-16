@@ -25,7 +25,7 @@ export default function FormReview() {
                 <label htmlFor="vote" className="form-label">Vote</label>
                 <input
                   type="number"
-                  className="form-control"
+                  className="form-control fw-bold"
                   id="vote"
                   min={0}
                   max={5} />
@@ -41,7 +41,7 @@ export default function FormReview() {
 
           {/* Button */}
           <div className="mb-3">
-            <button type="button" className="btn btn-dark">
+            <button type="button" className="btn btn-dark" style={{ color: ' rgb(69, 214, 147)' }}>
               Send <i className="bi bi-send"></i>
             </button>
           </div>

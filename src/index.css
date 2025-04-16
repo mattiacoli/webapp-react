@@ -4,3 +4,12 @@
 body {
   font-family: 'Barlow Condensed', sans-serif;
 }
+
+.navbar {
+  font-family: 'Press Start 2P', system-ui;
+  color: rgb(69, 214, 147);
+}
+
+.bi {
+  color: rgb(69, 214, 147);
+}
