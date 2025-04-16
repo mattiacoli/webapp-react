@@ -7,7 +7,7 @@ export default function JumboDetail({ movie }) {
 
         <div className="row" >
           <div className="col-8 fs-3">
-            <h1 className="display-5 fw-bolder mb-3">{movie.title}</h1>
+            <h1 className="display-5 mb-3">{movie.title}</h1>
             <p>Director: {movie.director}</p>
             <p>Year: {movie.release_year}</p>
             <p>Genre: {movie.genre}</p>
