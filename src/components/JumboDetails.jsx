@@ -3,7 +3,7 @@ export default function JumboDetail({ movie }) {
 
     <div className="jumbotron p-5 mb-4 bg-black text-white border-bottom rounded-bottom"
       style={{ backgroundImage: `url(http://localhost:3000/images/${movie.image})`, backgroundSize: 'cover' }} >
-      <div className="container-fluid p-5 rounded-3" style={{ backgroundColor: ' rgba(0, 0, 0, 0.85) ' }}>
+      <div className="container-fluid p-5 rounded-3" style={{ backgroundColor: ' rgba(0, 0, 0, 0.85)' }}>
 
         <div className="row" >
           <div className="col-8 fs-3">

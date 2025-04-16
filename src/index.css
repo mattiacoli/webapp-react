@@ -1,15 +1,26 @@
 @import 'bootstrap';
 @import 'bootstrap-icons';
 
+:root {
+  --mv-primary: rgb(69, 214, 147);
+
+}
+
 body {
   font-family: 'Barlow Condensed', sans-serif;
 }
 
 .navbar {
   font-family: 'Press Start 2P', system-ui;
-  color: rgb(69, 214, 147);
+  color: var(--mv-primary);
 }
 
 .bi {
-  color: rgb(69, 214, 147);
+  color: var(--mv-primary);
+}
+
+.jumbotron {
+  h1 {
+    color: var(--mv-primary);
+  }
 }

@@ -28,7 +28,7 @@ export default function ReviewCard({ review }) {
 
   return (
 
-    <div key={review.id} className="card fs-4 my-3">
+    <div key={review.id} className="card fs-4 my-3" style={{ boxShadow: '1px 1px 5px 0px #424141' }}>
       <div className="card-header d-flex justify-content-between align-item-center ">
         <h4 className='fw-bold'>{review.name}</h4>
         <div className='vote fs-5'>{starRating(review.vote)}</div>
