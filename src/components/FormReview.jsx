@@ -5,7 +5,7 @@ export default function FormReview({ movieId }) {
 
   const initialData = {
     name: '',
-    vote: 0,
+    vote: 1,
     text: ''
   }
 
@@ -23,7 +23,6 @@ export default function FormReview({ movieId }) {
     const formErrors = {}
 
     if (data.name.length < 3) formErrors.name = 'Name must be at least 3 characters long'
-    if (!data.vote) formErrors.vote = "Vote is required"
     if (data.vote < 1 || data.vote > 5) formErrors.vote = 'Vote must be between 1 and 5'
     if (data.text.length < 10) formErrors.text = 'Your review must be at least 10 characters long '
 
@@ -80,6 +79,7 @@ export default function FormReview({ movieId }) {
         {success && (
 
           <div className="alert alert-success" role="alert">
+            <i class="bi bi-check-all mr-4"></i>
             {success.message}
           </div>
         )}
@@ -87,6 +87,9 @@ export default function FormReview({ movieId }) {
         {Object.keys(errors).length > 0 && (
 
           <div className="alert alert-danger" role="alert">
+
+            <h4 className='text-center'>ALERT! <i class="bi bi-exclamation-triangle-fill text-danger fs-3"></i></h4>
+
             <ul>
               {Object.keys(errors).map((key) => (
                 <li key={key}>
