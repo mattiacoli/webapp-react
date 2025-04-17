@@ -20,6 +20,7 @@ body {
 }
 
 .jumbotron {
+
   h1 {
     color: var(--mv-primary);
     font-weight: 900;

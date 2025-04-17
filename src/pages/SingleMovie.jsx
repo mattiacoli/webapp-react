@@ -31,7 +31,7 @@ export default function SingleMovie() {
 
 
       {/* Form */}
-      <FormReview />
+      <FormReview movieId={movie.id} />
 
 
       <hr />
