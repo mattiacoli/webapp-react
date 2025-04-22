@@ -29,7 +29,6 @@ function App() {
             {/* 404 */}
             <Route path="/*" Component={NotFound} />
 
-
           </Route>
         </Routes>
 

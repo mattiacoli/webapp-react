@@ -17,7 +17,7 @@ export default function DefaultLayout() {
 
       <Header />
 
-      <main>
+      <main className="vh-100">
         {loader && (<Loader />)
         }
         <Outlet />
