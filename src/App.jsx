@@ -1,12 +1,19 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import { useState } from "react"
 import DefaultLayout from "./layouts/DefaultLayouts"
+
+// pages
 import Homepage from "./pages/Homepage"
 import SingleMovie from "./pages/SingleMovie"
 import NotFound from "./pages/NotFound"
+import Register from "./pages/auth/Register"
+import Login from "./pages/auth/Login"
 
 // global context
 import GlobalContext from "./contexts/GlobalContext"
+
+
+
 
 function App() {
 
@@ -28,6 +35,11 @@ function App() {
             <Route path="/movie/:id" Component={SingleMovie} />
             {/* 404 */}
             <Route path="/*" Component={NotFound} />
+
+
+            {/* auth routes */}
+            <Route path="/register" Component={Register} />
+            <Route path="/login" Component={Login} />
 
           </Route>
         </Routes>
