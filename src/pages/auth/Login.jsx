@@ -4,8 +4,8 @@ export default function Login() {
   return (
     <div className="container d-flex justify-content-center align-items-center vh-100">
       <div className="card w-100">
-        <div className="card-body">
-          <h5 className="card-title text-center fw-bolder fs-1">Login</h5>
+        <div className="card-body " style={{ color: 'var(--mv-primary)' }}>
+          <h5 className="card-title text-center text-black fw-bolder fs-1">Login</h5>
           <form>
             <div className="mb-3">
               <label htmlFor="email" className="form-label">Email address</label>
@@ -15,7 +15,7 @@ export default function Login() {
               <label htmlFor="password" className="form-label">Password</label>
               <input type="password" className="form-control" id="password" />
             </div>
-            <button type="submit" className="btn btn-dark">Login</button>
+            <button type="submit" className="btn btn-dark fw-bold" style={{ color: 'var(--mv-primary)' }}>Login</button>
           </form>
         </div>
         <div className="card-footer text-muted">
