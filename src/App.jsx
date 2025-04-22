@@ -1,28 +1,35 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import { useState } from "react"
 import DefaultLayout from "./layouts/DefaultLayouts"
 import Homepage from "./pages/Homepage"
 import SingleMovie from "./pages/SingleMovie"
 
+// global context
+import GlobalContext from "./contexts/GlobalContext"
+
 function App() {
+
+  const [loader, setLoader] = useState(false)
 
 
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route Component={DefaultLayout}>
 
-          <Route path="/" Component={Homepage} />
+    <GlobalContext.Provider value={{ loader, setLoader }}>
 
-          <Route path="/movie/:id" Component={SingleMovie} />
+      <BrowserRouter>
 
 
+        <Routes>
+          <Route Component={DefaultLayout}>
 
+            <Route path="/" Component={Homepage} />
 
-        </Route>
-      </Routes>
-    </BrowserRouter>
+            <Route path="/movie/:id" Component={SingleMovie} />
+          </Route>
+        </Routes>
 
-
+      </BrowserRouter>
+    </GlobalContext.Provider>
   )
 }
 

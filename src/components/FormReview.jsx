@@ -79,7 +79,7 @@ export default function FormReview({ movieId }) {
         {success && (
 
           <div className="alert alert-success" role="alert">
-            <i class="bi bi-check-all mr-4"></i>
+            <i className="bi bi-check-all mr-4"></i>
             {success.message}
           </div>
         )}
@@ -88,7 +88,7 @@ export default function FormReview({ movieId }) {
 
           <div className="alert alert-danger" role="alert">
 
-            <h4 className='text-center'>ALERT! <i class="bi bi-exclamation-triangle-fill text-danger fs-3"></i></h4>
+            <h4 className='text-center'><i className="bi bi-exclamation-triangle-fill text-danger fs-3"></i>   ALERT! </h4>
 
             <ul>
               {Object.keys(errors).map((key) => (
