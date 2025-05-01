@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -27,6 +28,10 @@ export default function Dashboard() {
         <div className="card-body " style={{ color: 'var(--mv-primary)' }}>
           <h5 className="card-title text-center text-black fw-bolder fs-1">Dashboard</h5>
           <p className="text-center">Welcome to the admin dashboard!</p>
+        </div>
+
+        <div className="add_movie ms-auto p-2">
+          <Link to='/admin/new_movie' className='btn btn-primary'>+ New Movie</Link>
         </div>
 
 
