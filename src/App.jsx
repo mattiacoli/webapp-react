@@ -11,6 +11,7 @@ import Login from "./pages/auth/Login"
 
 // global context
 import GlobalContext from "./contexts/GlobalContext"
+import Dashboard from "./pages/admin/Dashboard"
 
 
 
@@ -40,6 +41,8 @@ function App() {
             {/* auth routes */}
             <Route path="/register" Component={Register} />
             <Route path="/login" Component={Login} />
+
+            <Route path="/admin/dashboard" Component={Dashboard} />
 
           </Route>
         </Routes>
