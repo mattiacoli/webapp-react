@@ -35,17 +35,20 @@ function App() {
             <Route path="/" Component={Homepage} />
             {/* Single movie page */}
             <Route path="/movie/:id" Component={SingleMovie} />
-            {/* 404 */}
-            <Route path="/*" Component={NotFound} />
 
 
             {/* auth routes */}
             <Route path="/register" Component={Register} />
             <Route path="/login" Component={Login} />
 
+
+
+            {/* Admin pages */}
             <Route path="/admin/dashboard" Component={Dashboard} />
             <Route path="/admin/new_movie" Component={FormAddMovie} />
 
+            {/* 404 */}
+            <Route path="/*" Component={NotFound} />
           </Route>
         </Routes>
 
