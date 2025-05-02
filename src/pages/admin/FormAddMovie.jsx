@@ -18,20 +18,32 @@ export default function FormAddMovie() {
 
   function handleChange(e) {
     const { name, value } = e.target
-    setNewMovie({ ...newMovie, [name]: value })
+    if (e.target.type === 'file') {
+      setNewMovie({ ...newMovie, [name]: e.target.files[0] })
+    } else {
+
+      setNewMovie({ ...newMovie, [name]: value })
+    }
   }
 
 
   function handleSubmit(e) {
     e.preventDefault()
 
+    const form = new FormData();
+
+    form.append("title", newMovie.title)
+    form.append("director", newMovie.director)
+    form.append("genre", newMovie.genre)
+    form.append("release_year", newMovie.release_year)
+    form.append("abstract", newMovie.abstract)
+    form.append("image", newMovie.image)
+
     fetch('http://localhost:3000/api/v1/movies/add_movie',
 
       {
         method: "POST",
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(newMovie)
-
+        body: form
       })
       .then(res => res.json())
       .then(data => {
@@ -118,11 +130,10 @@ export default function FormAddMovie() {
           <div className="mb-3">
             <label htmlFor="image" className="form-label">Image Url</label>
             <input
-              type="text"
+              type="file"
               className="form-control"
               id="image"
               name="image"
-              value={newMovie.image}
               onChange={handleChange} />
           </div>
 

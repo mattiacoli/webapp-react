@@ -12,7 +12,7 @@ import Login from "./pages/auth/Login"
 // global context
 import GlobalContext from "./contexts/GlobalContext"
 import Dashboard from "./pages/admin/Dashboard"
-import FormAddMovie from "./components/FormAddMovie"
+import FormAddMovie from "./pages/admin/FormAddMovie"
 
 
 
